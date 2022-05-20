@@ -7,18 +7,19 @@ function main() {
 
   // create new window
   let mainWindow = new BrowserWindow({
-    webPreferences: {
-      nodeIntegration: true
-    },
-    width: 800,
-    height: 600,
-  })
+		webPreferences: {
+			nodeIntegration: true,
+		},
+		width: 520,
+    height: 650,
+    frame: false,
+	});
 
   // load app/index.html as the window content
   mainWindow.loadFile(path.join('app', 'index.html'));
 
   // open devtools
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
 }
 
 app.on('ready', main);
